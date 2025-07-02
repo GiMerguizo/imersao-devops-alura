@@ -84,3 +84,8 @@ docker run -p 8000:8000 image-api
 ```
 - Abrir no local host
 [http://localhost:8000/docs](http://localhost:8000/docs)
+
+### Subindo com o docker-compose
+```sh
+docker compose up
+```

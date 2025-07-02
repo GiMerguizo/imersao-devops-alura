@@ -1,0 +1,9 @@
+services:
+  app:
+    build: . # Constroi a imagem a partir do Dockerfile no diretório atual
+    container_name: api
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app # Monta o diretório atual no contêiner
+    
