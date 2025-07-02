@@ -14,22 +14,28 @@ Este projeto é uma API desenvolvida com FastAPI para gerenciar alunos, cursos e
    [Clique aqui para realizar o download](https://github.com/guilhermeonrails/imersao-devops/archive/refs/heads/main.zip)
 
 2. **Crie um ambiente virtual:**
+   - No Linux/Mac:
    ```sh
    python3 -m venv ./venv
    ```
+   - No Windows
+   ```sh
+   python -m venv ./venv
+   ```
+
 
 3. **Ative o ambiente virtual:**
    - No Linux/Mac:
      ```sh
      source venv/bin/activate
      ```
-   - No Windows, abra um terminal no modo administrador e execute o comando:
-   ```sh
-   Set-ExecutionPolicy RemoteSigned
-   ```
-
+   - No Windows:
      ```sh
      venv\Scripts\activate
+     ```
+   - Depois, para desativar:
+     ```sh
+     deactivate
      ```
 
 4. **Instale as dependências:**
@@ -66,3 +72,15 @@ Este projeto é uma API desenvolvida com FastAPI para gerenciar alunos, cursos e
 - Para reiniciar o banco, basta apagar o arquivo `escola.db` (isso apagará todos os dados).
 
 ---
+
+## Docker
+- Constuindo a imagem
+```sh
+docker build -t image-api .
+```
+- Rodando o container
+```sh
+docker run -p 8000:8000 image-api
+```
+- Abrir no local host
+[http://localhost:8000/docs](http://localhost:8000/docs)
